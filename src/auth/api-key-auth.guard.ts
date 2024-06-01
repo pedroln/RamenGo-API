@@ -17,7 +17,7 @@ import {
       }
   
       // call your env. var the name you want
-      if (apiKey !== 'cb54119f-fc0e-4d4f-b8e1-30bc7c54dc4e') {
+      if (apiKey !== process.env.API_KEY) {
         throw new UnauthorizedException('x-api-key header missing');
       }
   
