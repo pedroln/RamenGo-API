@@ -3,7 +3,6 @@ import { CreateOrderDto } from './dto/create-order.dto';
 import { UpdateOrderDto } from './dto/update-order.dto';
 import { BrothsService } from '../broths/broths.service'
 import { InjectRepository } from '@nestjs/typeorm';
-import { Broth } from 'src/broths/entities/broth.entity';
 import { Repository } from 'typeorm';
 import { ProteinsService } from 'src/proteins/proteins.service';
 import { Order } from './entities/order.entity';
@@ -28,19 +27,4 @@ export class OrdersService {
     }
   }
 
-  findAll() {
-    return `This action returns all orders`;
-  }
-
-  findOne(id: number) {
-    return `This action returns a #${id} order`;
-  }
-
-  update(id: number, updateOrderDto: UpdateOrderDto) {
-    return `This action updates a #${id} order`;
-  }
-
-  remove(id: number) {
-    return `This action removes a #${id} order`;
-  }
 }

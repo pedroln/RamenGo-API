@@ -1,11 +1,10 @@
-import { Seeder, SeederFactoryManager } from 'typeorm-extension';
+import { Seeder } from 'typeorm-extension';
 import { DataSource } from 'typeorm';
 import { Broth } from 'src/broths/entities/broth.entity';
 
 export default class BrothSeeder implements Seeder {
     public async run(
         dataSource: DataSource,
-        factoryManager: SeederFactoryManager,
     ): Promise<void> {
         await dataSource.query('TRUNCATE "broth" RESTART IDENTITY;');
 

@@ -1,6 +1,4 @@
 import { Injectable } from '@nestjs/common';
-import { CreateProteinDto } from './dto/create-protein.dto';
-import { UpdateProteinDto } from './dto/update-protein.dto';
 import { Protein } from './entities/protein.entity';
 import { Repository } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
