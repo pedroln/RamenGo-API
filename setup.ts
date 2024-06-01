@@ -8,7 +8,6 @@ const DB_HOST: string = process.env.DB_HOST || 'localhost';
 const DB_PASSWORD: string = process.env.DB_PASSWORD || 'root';
 
 async function setupDatabase() {
-    console.log(DB_PASSWORD)
 
 
     const client = new Client({
@@ -17,6 +16,8 @@ async function setupDatabase() {
         password: DB_PASSWORD,
         port: 5432,
     });
+    console.log(client)
+
     
     await client.connect();
     
