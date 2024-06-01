@@ -8,7 +8,7 @@ const DB_HOST: string = process.env.DB_HOST || 'localhost';
 const DB_PASSWORD: string = process.env.DB_PASSWORD || 'root';
 
 async function setupDatabase() {
-
+    console.log(DB_PASSWORD)
 
 
     const client = new Client({
