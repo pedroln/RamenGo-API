@@ -15,8 +15,8 @@ async function setupDatabase() {
         user: DB_USER,
         password: DB_PASSWORD,
         port: 5432,
+        database:DB_NAME
     });
-    console.log(client)
 
     
     await client.connect();
