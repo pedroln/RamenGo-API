@@ -1,5 +1,5 @@
 import { Controller, Post, Body,UseGuards } from '@nestjs/common';
-import { OrdersService } from './orders.service';
+import { OrdersService } from './order.service';
 import { CreateOrderDto } from './dto/create-order.dto';
 
 import { ApiKeyGuard } from 'src/auth/api-key-auth.guard';

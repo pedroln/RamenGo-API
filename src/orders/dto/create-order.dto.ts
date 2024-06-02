@@ -12,13 +12,13 @@ export class CreateOrderDto {
     @IsNotEmpty({
         message: 'both brothId and proteinId are required',
     })
-    BrothId: number;
+    brothId: number;
 
 
     @IsNotEmpty({
         message: 'both brothId and proteinId are required',
     })
-    Proteinid: number;
+    proteinId: number;
 
 
 

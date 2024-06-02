@@ -4,7 +4,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { typeOrmConfig } from './configs/typeorm.config';
 import { BrothsModule } from './broths/broths.module';
 import { ProteinsModule } from './proteins/proteins.module';
-import { OrdersModule } from './orders/orders.module';
+import { OrdersModule } from './orders/order.module';
 import { ConfigModule } from '@nestjs/config';
 
 
