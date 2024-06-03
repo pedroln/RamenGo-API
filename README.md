@@ -16,7 +16,8 @@
 
 **Conteúdo:**
 
-CRUD de Tasks utilizando Typescript (framework NestJS) e com o código hospedado em AWS Lambda, com sua Api exposta na AWS API Gateway e as informações guardadas no banco de dados DynamoDB.
+Listagem de Proteínas e Caldos já criados automaticamente no banco de dados (seeds)
+Criação de pedidos a partir dessas informações
 
 Bibliotecas utilizadas:
 
