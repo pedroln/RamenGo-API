@@ -10,6 +10,9 @@
 
 - Criação automatizada do banco de dados e povoamento (seeds) dos ingredientes
 
+<h3> REQUISITO PENDENTE: </h3>
+
+- Gerar o ID do pedido a partir da chamada do Endpoint enviado no teste, ao invés disso, o ID do pedido está sendo gerado em sua criação.
 
 **Conteúdo:**
 
