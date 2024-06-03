@@ -12,13 +12,12 @@ import {
     async canActivate(context: ExecutionContext): Promise<boolean> {
       const request = context.switchToHttp().getRequest();
   
-      const apiKey = request.headers['x-api-key']; // give the name you want
+      const apiKey = request.headers['x-api-key']; 
   
       if (!apiKey) {
         throw new UnauthorizedException('x-api-key header missing');
       }
   
-      // call your env. var the name you want
       if (apiKey !== process.env.API_KEY) {
         throw new HttpException({error: 'x-api-key header missing'}, HttpStatus.FORBIDDEN)
       
