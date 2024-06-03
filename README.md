@@ -38,9 +38,9 @@ API_KEY = "Api-key que será enviada a partir do header"
 
 
 - Para rodar o projeto, primeiramente instalaremos suas dependências:
-   <blockquote> "npm install"
+  <blockquote> "npm install"
   </blockquote>
-- Antes de iniciarmos de vez o projeto, utilize o seguinte script para criar o banco de dados e povoa-lo com os ingredientes a partir do seed  -
+- Antes de iniciarmos de vez o projeto, utilize o seguinte script para criar o banco de dados e povoa-lo com os ingredientes a partir do seed  
   <blockquote> "npm run prestart"
   </blockquote>
 - Após todo este processo, bastar rodar o projeto e testar as suas funções (na url localhost:3000)
