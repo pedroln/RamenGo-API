@@ -30,6 +30,7 @@ DB_HOST = "Host do banco de dados"
 DB_PORT = "Porta que irá rodar o banco de dados"
 DB_PASSWORD = "Senha do banco de dados"
 API_KEY = "Api-key que será enviada a partir do header"
+</blockquote>
 
 
 - Para rodar o projeto, primeiramente instalaremos suas dependências:
