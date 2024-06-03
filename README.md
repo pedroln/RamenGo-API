@@ -52,16 +52,16 @@ API_KEY = "Api-key que será enviada a partir do header"
 
   - <strong>LISTAGEM DE TODAS AS PROTEINAS - ROTA - GET</strong> 
       <blockquote>**url**/broths/</blockquote>
-  RETORNO: Lista os caldos disponiveis com suas informações (ja povoados a partir do seed)
-  Caso a Api-Key inserida via Header seja diferente da inserida no .env, um erro 403 retornará com a seguinte mensagem:
-      <blockquote>"error": "x-api-key header missing"</blockquote>
+    RETORNO: Lista os caldos disponiveis com suas informações (ja povoados a partir do seed)
+    Caso a Api-Key inserida via Header seja diferente da inserida no .env, um erro 403 retornará com a seguinte mensagem:
+        <blockquote>"error": "x-api-key header missing"</blockquote>
 
 
   - <strong>LISTAGEM DE TODAS AS PROTEINAS - ROTA - GET</strong> 
       <blockquote>**url**/proteins/</blockquote>
-  RETORNO: Lista as proteínas disponiveis com suas informações (ja povoados a partir do seed)
-  Caso a Api-Key inserida via Header seja diferente da inserida no .env, um erro 403 retornará com a seguinte mensagem:
-      <blockquote>"error": "x-api-key header missing"</blockquote>
+    RETORNO: Lista as proteínas disponiveis com suas informações (ja povoados a partir do seed)
+    Caso a Api-Key inserida via Header seja diferente da inserida no .env, um erro 403 retornará com a seguinte mensagem:
+        <blockquote>"error": "x-api-key header missing"</blockquote>
 
   
   - <strong>CRIAÇÃO DE UM PEDIDO UTILIZANDO AS INFORMAÇÕES (UM CALDO E UMA PROTEÍNA ESCOLHIDOS) - ROTA - POST</strong> 
