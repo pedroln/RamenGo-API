@@ -64,9 +64,8 @@ API_KEY = "Api-key que será enviada a partir do header"
       <blockquote>"error": "x-api-key header missing"</blockquote>
 
   
-  - <strong>CRIAÇÃO DE UM PEDIDO - ROTA - POST</strong> 
+  - <strong>CRIAÇÃO DE UM PEDIDO UTILIZANDO AS INFORMAÇÕES (UM CALDO E UMA PROTEÍNA ESCOLHIDOS) - ROTA - POST</strong> 
         <blockquote>localhost:3000/order</blockquote>
-  Criação de um pedido utilizando as informações (um caldo e uma proteína escolhidos)
   RETORNO: Pedido salvo, retornando seu nome, sua imagem e um ID gerado.
   O endpoint não permite salvar sem o campo "brothId" e "proteinId", caso algum desses campos sejam retirados, um erro 400 retornará com a seguinte mensagem:
       <blockquote>"error": "both brothId and proteinId are required"</blockquote>
