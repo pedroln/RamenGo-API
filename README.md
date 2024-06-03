@@ -1,73 +1,85 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+<h2> RAMENGO - PLATAFORMA DE PEDIDO </h2>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+<h3> Requisitos que foram feitos com sucesso: </h3>
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+- Listagem dos caldos e proteínas e criação do pedido (Todos os retornos de acordo com os requisitos enviados)
 
-## Description
+- Conexão com banco de dados PosgreSQL para armazenamento das informações de caldo/proteína/pedidos.
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+- Utilização de uma API-Key para permitir o uso das funções
 
-## Installation
+- Criação automatizada do banco de dados e povoamento (seeds) dos ingredientes
 
-```bash
-$ npm install
-```
 
-## Running the app
+**Conteúdo:**
 
-```bash
-# development
-$ npm run start
+CRUD de Tasks utilizando Typescript (framework NestJS) e com o código hospedado em AWS Lambda, com sua Api exposta na AWS API Gateway e as informações guardadas no banco de dados DynamoDB.
 
-# watch mode
-$ npm run start:dev
+Bibliotecas utilizadas:
 
-# production mode
-$ npm run start:prod
-```
+- Bibliotecas do NestJS
+- Typeorm
+- Typeorm-extension
 
-## Test
+Funcionalidades:
 
-```bash
-# unit tests
-$ npm run test
+IMPORTANTE: Antes de rodar o projeto, criar um arquivo .env para a configuração das variáveis de ambientes utilizadas:
+<blockquote>DB_NAME = "Nome do banco de dados"
+DB_USER = "Usuario do banco de dados"
+DB_HOST = "Host do banco de dados"
+DB_PORT = "Porta que irá rodar o banco de dados"
+DB_PASSWORD = "Senha do banco de dados"
+API_KEY = "Api-key que será enviada a partir do header"
+</blockquote>
 
-# e2e tests
-$ npm run test:e2e
 
-# test coverage
-$ npm run test:cov
-```
+- Para rodar o projeto, primeiramente instalaremos suas dependências:
+-   <blockquote> "npm install"
+  </blockquote>
+- Antes de iniciarmos de vez o projeto, utilize o seguinte script para criar o banco de dados e povoa-lo com os ingredientes a partir do seed  -
+  <blockquote> "npm run prestart"
+  </blockquote>
+- Após todo este processo, bastar rodar o projeto e testar as suas funções (na url localhost:3000)
+  <blockquote> "npm run start:dev"
+    </blockquote>
+- Lembre-se de inserir a Api-Key via header da seguinte maneira:
+  <blockquote> "x-api-key": "sua api-key"
+    </blockquote>
 
-## Support
+<h5> 
+  
+- Abaixo está listado as rotas e os bodys em JSON (para as requisições que exigem uma inserção do mesmo) de modo que a requisição seja feita com sucesso para cada requisito (e também para dar trigger em cada exceção/validação que foi criada)</h5>
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+  - <strong>LISTAGEM DE TODAS AS PROTEINAS - ROTA - GET</strong> 
+      <blockquote>**url**/broths/</blockquote>
+    RETORNO: Lista os caldos disponiveis com suas informações (ja povoados a partir do seed)
+    Caso a Api-Key inserida via Header seja diferente da inserida no .env, um erro 403 retornará com a seguinte mensagem:
+        <blockquote>"error": "x-api-key header missing"</blockquote>
 
-## Stay in touch
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+  - <strong>LISTAGEM DE TODAS AS PROTEINAS - ROTA - GET</strong> 
+      <blockquote>**url**/proteins/</blockquote>
+    RETORNO: Lista as proteínas disponiveis com suas informações (ja povoados a partir do seed)
+    Caso a Api-Key inserida via Header seja diferente da inserida no .env, um erro 403 retornará com a seguinte mensagem:
+        <blockquote>"error": "x-api-key header missing"</blockquote>
 
-## License
+  
+  - <strong>CRIAÇÃO DE UM PEDIDO UTILIZANDO AS INFORMAÇÕES (UM CALDO E UMA PROTEÍNA ESCOLHIDOS) - ROTA - POST</strong> 
+        <blockquote>localhost:3000/order</blockquote>
+  RETORNO: Pedido salvo, retornando seu nome, sua imagem e um ID gerado.
+  O endpoint não permite salvar sem o campo "brothId" e "proteinId", caso algum desses campos sejam retirados, um erro 400 retornará com a seguinte mensagem:
+      <blockquote>"error": "both brothId and proteinId are required"</blockquote>
+    Caso for inserido um ID não existente, retornará erro 500 com a seguinte mensagem:
+        <blockquote>"error": "could not place order"</blockquote>
+  
+    JSON EXEMPLO:
+  
+   <blockquote> 
+             
+              {
+                  "brothId": 1,
+                  "proteinId": 1
+              }
+              
+   </blockquote>
 
-Nest is [MIT licensed](LICENSE).
