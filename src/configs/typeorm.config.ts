@@ -7,7 +7,7 @@ dotenv.config({});
 export const typeOrmConfig: TypeOrmModuleOptions & DataSourceOptions & SeederOptions = {
   type: 'postgres',
   host: process.env.DB_HOST,
-  port: 5432,
+  port: parseInt(process.env.DB_PORT),
   username: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
   database: process.env.DB_NAME,
@@ -18,7 +18,7 @@ export const typeOrmConfig: TypeOrmModuleOptions & DataSourceOptions & SeederOpt
 const options: DataSourceOptions & SeederOptions = {
   type: 'postgres',
   host: process.env.DB_HOST,
-  port: 5432,
+  port: parseInt(process.env.DB_PORT),
   username: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
   database: process.env.DB_NAME,

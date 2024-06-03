@@ -19,7 +19,7 @@
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
     "seed": "ts-node ./node_modules/typeorm-extension/bin/cli.cjs seed:run  -d ./src/configs/typeorm.config.ts",
-    "prestart": "ts-node setup.ts"
+    "prestart": "ts-node setup.ts && nest build && npm run seed"
   },
   "dependencies": {
     "@nestjs/axios": "^3.0.2",
